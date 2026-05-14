@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://addons/ai_paste/ai_paste_dock.gd" id="1"]
 
 [node name="AIPasteDock" type="Control"]
-custom_minimum_size = Vector2(220, 300)
+custom_minimum_size = Vector2(220, 120)
 size_flags_vertical = 3
 script = ExtResource("1")
 
@@ -22,22 +22,12 @@ theme_override_font_sizes/font_size = 14
 
 [node name="HSep1" type="HSeparator" parent="VBox"]
 
-[node name="Preview" type="TextEdit" parent="VBox"]
-size_flags_vertical = 3
-placeholder_text = "Press 'Read Clipboard' to load code from AI…"
-syntax_highlighter = null
-wrap_mode = 1
-
 [node name="StatusBar" type="HBoxContainer" parent="VBox"]
 
 [node name="StatusLabel" type="Label" parent="VBox/StatusBar"]
 size_flags_horizontal = 3
 text = "Ready"
 clip_text = true
-
-[node name="CharCount" type="Label" parent="VBox/StatusBar"]
-text = "0 chars"
-horizontal_alignment = 2
 
 [node name="HSep2" type="HSeparator" parent="VBox"]
 
@@ -47,11 +37,3 @@ size_flags_horizontal = 3
 [node name="PasteBtn" type="Button" parent="VBox/Buttons"]
 size_flags_horizontal = 3
 text = "📋 Read Clipboard"
-
-[node name="ApplyBtn" type="Button" parent="VBox/Buttons"]
-size_flags_horizontal = 3
-text = "✅ Apply to Script"
-disabled = true
-
-[node name="ClearBtn" type="Button" parent="VBox/Buttons"]
-text = "🗑"
